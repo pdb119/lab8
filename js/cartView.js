@@ -8,5 +8,8 @@
 */
 
 function createCartView(config) {
-    
+    var view = createTemplateView();
+	view.afterRender = function() {
+		
+	};
 } //createCartView()

@@ -9,5 +9,16 @@
 */
 
 function createCartModel(config) {
-
+	var listModel = createListModel();
+	listModel.getTotalPrice = function(){
+		var totalPrice = 0;
+		for(var i=0; i<this.items.length; i++){
+			totalPrice = this.items[i].price;
+		}
+		return totatPrice.toFixed(2);
+	}
+	
+	listModel.toJSON = function(){
+		return JSON.stringify(this.items);
+	}
 } //createCartModel()
