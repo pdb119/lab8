@@ -18,8 +18,7 @@ var TemplateView = {
         //iterrate over the properties of the model
         //and look for a descendant element with the
         //same style class name
-        for (prop in this.model) {
-
+        for (prop in this.model) {				
             targetElem = clonedTemplate.find('.' + prop);
             if (targetElem.length > 0) {
                 //get the property value

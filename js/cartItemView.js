@@ -7,5 +7,9 @@
 */
 
 function createCartItemView(config) {
-
+	var view = createTemplateView(config);
+	view.afterRender = function(template, model) {		
+		template.find(".remove-item").click(function(){ view.cartModel.removeItem(model); });
+	}
+	return view;
 } //createCartItemView()

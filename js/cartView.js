@@ -8,8 +8,18 @@
 */
 
 function createCartView(config) {
+<<<<<<< HEAD
     var view = createTemplateView();
 	view.afterRender = function() {
 		
 	};
+=======
+    config.cartModel = config.model;
+	config.templateView = createCartItemView(config);
+	var view = createTemplateListView(config);
+	view.afterRender = function(template, model) {
+		this.totalPrice.html(this.model.getTotalPrice());
+	};
+	return view;
+>>>>>>> done
 } //createCartView()

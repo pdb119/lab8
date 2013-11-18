@@ -18,7 +18,7 @@ function createMoviesView(config) {
             var eventData = {
                 movieID: button.attr('data-movie-id'),
                 format: button.attr('data-movie-format')
-            };
+            };			
             view.trigger('addToCart', eventData);
         });
     }; //afterRender()
